@@ -1,12 +1,14 @@
 {
   "name": "pioneer-delivery-algorithm",
   "version": "1.0.0",
-  "description": "Pioneer Delivery Company's Algorithm Portfolio — Part I: Greedy Algorithms",
-  "main": "dist/main.js",
+  "description": "Pioneer Delivery Company's Algorithm Portfolio",
+  "main": "dist/part1/main.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/main.js",
-    "test": "tsc && node dist/testTasks.js"
+    "start": "tsc && node dist/part1/main.js",
+    "test": "tsc && node dist/part1/testTasks.js",
+    "start:part2": "tsc && node dist/part2/mainPart2.js",
+    "test:part2": "tsc && node dist/part2/testPart2.js"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
