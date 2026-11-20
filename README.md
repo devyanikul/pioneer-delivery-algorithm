@@ -3,16 +3,18 @@
 **Course:** CS Algorithms  
 **Author:** Devyani Kulshrestha  
 **Language:** TypeScript (Node.js)  
-**Repository:** [GitHub Repository](https://github.com/devyanikul/pioneer-delivery-algorithm/)  
+**Repository:** [GitHub Repository](https://github.com/devyanikul/pioneer-delivery-algorithm/) 
+**AI Tool:** Antigravity/Gemini 3.8 Flash 
 
 ---
 
 ## Project Overview
 
-This repository contains the semester-long algorithm portfolio for **Pioneer Delivery Company**, implementing core dispatching, routing, and scheduling algorithms. The project is split into two major parts:
+This repository contains the semester-long algorithm portfolio for **Pioneer Delivery Company**, implementing core dispatching, routing, and scheduling algorithms. The project is split into three major parts:
 
 1. **[Part I: Greedy Algorithms](src/part1/README.md)** — Solving interval scheduling and fleet-size optimization using greedy choices and priority queues.
 2. **[Part II: Divide and Conquer](src/part2/README.md)** — Solving spatial proximity, dispatch quality measurement, and threshold selection using divide-and-conquer recurrences.
+3. **[Part III: Dynamic Programming](src/part3/README.md)** — Solving weighted interval scheduling, fuel-constrained knapsack selection, and event-log cleanup alignment using dynamic programming.
 
 ---
 
@@ -31,6 +33,13 @@ This repository contains the semester-long algorithm portfolio for **Pioneer Del
 - **Task C: Selecting a Delivery-Time Threshold** — Finds the k-th smallest delivery duration in worst-case O(n) time using deterministic Median-of-Medians (BFPRT) with 3-way partitioning.
 - **Task D: Validation and Algorithm Analysis** — Complete analysis covering divide/combine design, asymptotic justifications, brute-force verification, and empirical timing benchmarks.
 - Detailed Documentation & Explanations: See [`src/part2/README.md`](src/part2/README.md).
+
+### Part III: Dynamic Programming
+- **Task A: Maximum-Profit Delivery Scheduling** — Computes optimal non-overlapping delivery schedules with variable profits using weighted interval scheduling with binary search in O(n log n) time.
+- **Task B: Delivery Selection with a Fuel Budget** — Solves 0/1 knapsack delivery selection under a fuel capacity constraint using a 2D DP table in O(nB) time.
+- **Task C: Event Log Cleanup with Sequence Alignment** — Maximizes removable target log entries while strictly preserving an essential event pattern as a subsequence in O(nm) time (adapted from LeetCode #3316).
+- **Task D: README, Documentation, and Testing** — Full plain-English documentation, empirical benchmarks, and validation against independent brute-force oracles.
+- Detailed Documentation & Explanations: See [`src/part3/README.md`](src/part3/README.md).
 
 ---
 
@@ -54,14 +63,24 @@ pioneerDeliveryCompanyAlgorithm/
     │   ├── testTasks.ts       # Part I test suite (18 tests)
     │   └── README.md          # Full Part I documentation
     │
-    └── part2/                 # Part II: Divide and Conquer
-        ├── location.ts        # Location class & squared distance
-        ├── taskA.ts           # Closest pair 2D algorithm
-        ├── taskB.ts           # Merge-sort inversion counter
-        ├── taskC.ts           # Median-of-medians selection
-        ├── mainPart2.ts       # CLI demo for Part II
-        ├── testPart2.ts       # Part II test suite (21 tests)
-        └── README.md          # Full Part II documentation
+    ├── part2/                 # Part II: Divide and Conquer
+    │   ├── location.ts        # Location class & squared distance
+    │   ├── taskA.ts           # Closest pair 2D algorithm
+    │   ├── taskB.ts           # Merge-sort inversion counter
+    │   ├── taskC.ts           # Median-of-medians selection
+    │   ├── mainPart2.ts       # CLI demo for Part II
+    │   ├── testPart2.ts       # Part II test suite (21 tests)
+    │   └── README.md          # Full Part II documentation
+    │
+    └── part3/                 # Part III: Dynamic Programming
+        ├── delivery.ts        # Weighted & fuel delivery models
+        ├── taskA.ts           # Weighted interval scheduling (binary search)
+        ├── taskB.ts           # 0/1 knapsack fuel budget
+        ├── taskC.ts           # Event log cleanup (sequence alignment DP)
+        ├── mainPart3.ts       # CLI demo for Part III
+        ├── testPart3.ts       # Part III test suite (46 tests)
+        ├── TaskD-Report.md    # Task D report (PDF-ready)
+        └── README.md          # Full Part III documentation
 ```
 
 ---
@@ -83,6 +102,10 @@ npm run build
   ```bash
   npm run start:part2
   ```
+- **Part III Demos:**
+  ```bash
+  npm run start:part3
+  ```
 
 ### 3. Run Test Suites
 - **Run Part I Tests (18 tests):**
@@ -92,4 +115,8 @@ npm run build
 - **Run Part II Tests (21 tests):**
   ```bash
   npm run test:part2
+  ```
+- **Run Part III Tests (46 tests):**
+  ```bash
+  npm run test:part3
   ```

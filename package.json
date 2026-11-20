@@ -8,7 +8,9 @@
     "start": "tsc && node dist/part1/main.js",
     "test": "tsc && node dist/part1/testTasks.js",
     "start:part2": "tsc && node dist/part2/mainPart2.js",
-    "test:part2": "tsc && node dist/part2/testPart2.js"
+    "test:part2": "tsc && node dist/part2/testPart2.js",
+    "start:part3": "tsc && node dist/part3/mainPart3.js",
+    "test:part3": "tsc && node dist/part3/testPart3.js"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
